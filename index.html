@@ -138,6 +138,167 @@
     .cert-grid { grid-template-columns:1fr; }
     .about-stats { grid-template-columns:1fr 1fr; }
   }
+  
+/* ==============================
+   GLOBAL RESPONSIVE SYSTEM (PRO LEVEL)
+   Clean + Professional (Option A)
+============================== */
+
+/* ---------- FLUID TYPOGRAPHY ---------- */
+html {
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ---------- GLOBAL CONTAINER SAFETY ---------- */
+section {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ---------- FLEX / GRID SAFETY ---------- */
+* {
+  max-width: 100%;
+}
+
+/* ---------- GLOBAL GRID FIX ---------- */
+.skills-grid,
+.comp-grid,
+.projects-grid,
+.cert-grid {
+  width: 100%;
+}
+
+/* ==============================
+   TABLET (<= 900px)
+============================== */
+@media (max-width: 900px) {
+
+  /* NAV */
+  nav {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 72px 20px;
+  }
+
+  /* HERO */
+  #hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 20px 60px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-name {
+    font-size: clamp(34px, 6vw, 48px);
+  }
+
+  .hero-roles {
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .hero-bio {
+    font-size: 14px;
+    margin: 0 auto 30px;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* EXPERIENCE */
+  .timeline::before {
+    left: 8px;
+  }
+
+  .exp-item {
+    flex-direction: column;
+  }
+
+  /* CONTACT */
+  .contact-wrap {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-left {
+    text-align: center;
+  }
+
+  .contact-info {
+    align-items: center;
+  }
+}
+
+/* ==============================
+   MOBILE (<= 600px)
+============================== */
+@media (max-width: 600px) {
+
+  /* HERO */
+  .hero-name {
+    font-size: 32px;
+  }
+
+  .hero-roles {
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+
+  .hero-bio {
+    font-size: 13px;
+  }
+
+  /* GRIDS → STACK EVERYTHING */
+  .skills-grid,
+  .comp-grid,
+  .cert-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* BUTTONS */
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* CONTACT FORM */
+  .contact-form {
+    padding: 20px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+  }
+}
 </style>
 </head>
 <body>
@@ -163,19 +324,47 @@
     </a>
   </div>
 </nav>
-
 <section id="hero">
   <div class="hero-glow"></div>
+
   <div class="hero-content">
+    
     <p class="hero-greeting">Hello, I'm</p>
-    <h1 class="hero-name">INGABIRE<br>Pacifique</h1>
-    <div class="hero-roles">Salesforce Admin &amp; Developer <span>|</span> CRM Implementation Specialist <span>|</span> RevOps Builder</div>
-    <p class="hero-bio">CRM Implementation &amp; RevOps Specialist with hands-on experience building, customizing, and managing Salesforce, Notion, and SendPulse CRM systems from scratch. Salesforce 3x Certified. ALX Alumni. McKinsey Forward. Trailhead Ranger. I turn unstructured business processes into efficient, automated systems that empower teams and drive measurable growth.</p>
-    <div class="hero-btns">
-      <a href="#projects" class="btn-primary">View Projects <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      <a href="#contact" class="btn-outline">Contact Me <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></a>
+
+    <h1 class="hero-name">
+      INGABIRE<br>Pacifique
+    </h1>
+
+    <div class="hero-roles">
+      Salesforce Administrator <span>|</span>
+      CRM Implementation Specialist <span>|</span>
+      RevOps Builder
     </div>
+
+    <p class="hero-bio">
+      CRM & RevOps Specialist with hands-on experience building, customizing, and optimizing Salesforce and CRM systems. I design and automate business processes that improve efficiency, scalability, and team performance. Salesforce 3x Certified. ALX Alumni. McKinsey Forward. Trailhead Ranger.
+    </p>
+
+    <div class="hero-btns">
+      
+      <a href="#projects" class="btn-primary">
+        View Projects
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+
+      <a href="#contact" class="btn-outline">
+        Contact Me
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+        </svg>
+      </a>
+
+    </div>
+
   </div>
+</section>
 </section>
 
 <section id="about">
