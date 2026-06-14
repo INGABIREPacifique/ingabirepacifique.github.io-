@@ -89,7 +89,7 @@
   .proj-tags { display:flex; flex-wrap:wrap; gap:8px; }
   .tag { background:rgba(37,99,235,0.12); border:1px solid rgba(59,130,246,0.2); color:var(--blue-light); font-size:11px; font-weight:600; padding:3px 10px; border-radius:20px; }
   #education { background: var(--bg); }
-  .edu-list { max-width:700px; margin:0 auto; display:flex; flex-direction:column; gap:20px; }
+  .edu-list { max-width:1000px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
   .edu-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:28px; transition: border-color 0.2s; }
   .edu-card:hover { border-color:rgba(59,130,246,0.3); }
   .edu-degree { font-size:17px; font-weight:700; color:var(--white); margin-bottom:4px; }
@@ -132,10 +132,12 @@
     .comp-grid { grid-template-columns:repeat(2,1fr); }
     .projects-grid { grid-template-columns:1fr; }
     .cert-grid { grid-template-columns:repeat(2,1fr); }
+    .edu-list { grid-template-columns:repeat(2,1fr); }
   }
   @media(max-width:600px){
     .skills-grid { grid-template-columns:repeat(2,1fr); }
     .cert-grid { grid-template-columns:1fr; }
+    .edu-list { grid-template-columns:1fr; }
     .about-stats { grid-template-columns:1fr 1fr; }
   }
   
@@ -168,6 +170,7 @@ section {
 .skills-grid,
 .comp-grid,
 .projects-grid,
+.edu-list,
 .cert-grid {
   width: 100%;
 }
@@ -273,6 +276,7 @@ section {
   .skills-grid,
   .comp-grid,
   .cert-grid,
+  .edu-list,
   .projects-grid {
     grid-template-columns: 1fr;
   }
